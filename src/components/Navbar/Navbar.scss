@@ -1,11 +1,17 @@
+@import "src/colors";
+
 .navbar {
     position: fixed;
     top: 0;
+    background-color: $ghostWhite;
+    height: 50px;
+    width: 100vw;
     .menu {
         list-style: none;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+        
          
         .menuitem a {
             text-decoration: none;

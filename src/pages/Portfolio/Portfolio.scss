@@ -1,5 +1,40 @@
+@import "src/colors";
+
 .portfolio {
     height: 100vh;
     width: 100vw;
-    background-color: burlywood;
+    background-color: $banksBlue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5% 0 5% 0;
+
+    .project-list {
+        overflow-y: scroll;
+        height: 75%;
+    }
+
+    .project-category-title {
+        color: white;
+    }
+
+    // SCROLL BAR STUFF
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: $ghostWhite $banksBlue;
+      }
+      
+      /* Works on Chrome/Edge/Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+      *::-webkit-scrollbar-track {
+        background: $banksBlue;
+      }
+      *::-webkit-scrollbar-thumb {
+        background-color: $ghostWhite;
+        border-radius: 25px;
+        border: 3px solid $banksBlue;
+      }
+
 }

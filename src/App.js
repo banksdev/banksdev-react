@@ -2,7 +2,7 @@ import './App.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Frontpage from './pages/Frontpage/Frontpage';
 import Portfolio from './pages/Portfolio/Portfolio';
-import About from './pages/About/About';
+// import About from './pages/About/About';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Frontpage />
         <Portfolio />
-        <About />
+        {/* <About /> */}
         
       </div>
     </Router>
