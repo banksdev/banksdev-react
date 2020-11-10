@@ -5,13 +5,48 @@
     width: 100vw;
     background-color: $banksBlue;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
     padding: 5% 0 5% 0;
+
+    @media only screen and (max-width: 480px) {
+      height: auto;
+    }
+
+
+    .title { color: white }
+
+    .portfolio-projects {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;   
+      
+      @media only screen and (max-width: 480px) {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
 
     .project-list {
         overflow-y: scroll;
         height: 75%;
+        
+        @media only screen and (max-width: 480px) {
+          .project-container {
+            width: 100%;
+          }
+
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+       
+        }
     }
 
     .project-category-title {

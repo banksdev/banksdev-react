@@ -2,16 +2,7 @@ import './Project.scss';
 import Modal from 'react-modal';
 import React, { useState } from 'react';
 import disableScroll from 'disable-scroll';
-
-function FullProject(props) {
-    return (
-        <div className="full-project">
-            <img src={props.image} alt=""/>
-
-        </div>
-    )
-}
-
+import FullProject from './FullProject';
 
 function Project(props) {
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -27,17 +18,18 @@ function Project(props) {
     }
 
     return (
-        <div>
+        <div className="project-container">
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-            >
-                {
-                    FullProject(props)
-                }
+                ariaHideApp={false}
+                style={{overlay: {zIndex: 5}}}
+                            >
+                { FullProject(props) }
+            
             </Modal>
 
-            <div class="project" onClick={openModal}>
+            <div className="project" onClick={openModal}>
                 <div className="project-cover-container">
                     <img src={props.image} alt="" className="project-cover-img"/>
 
